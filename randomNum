@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main(){
+  int num, want;
+  
+   
+  cout << "How many number do you want? ";
+  cin >> want;
+
+  cout << "What is maximum number? ";
+  cin >> num;
+
+  //cout << want << " " << num;
+   srand((unsigned)time(NULL)); //have to be coded outside of for
+
+  for(int i=1; i<=want; i++){
+   
+    int val = abs((rand() * RAND_MAX + rand()) % num);
+    cout<< val << endl;
+
+  }
+
+  return 0;
+  
+  
+}
