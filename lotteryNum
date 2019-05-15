@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main(){
+
+int num = 45;
+int i = 1;
+int max = 6;
+int out[6];
+
+srand((unsigned)time(NULL)); //have to be coded outside of for
+out[0] = 0;
+
+while(i<=max){
+
+int val = abs((rand() * RAND_MAX + rand()) % num) + 1;
+
+for(int j = 0; j<i; j++){
+   if(val != out[j]) out[i] = val;
+   else  {
+     val = abs((rand() * RAND_MAX + rand()) % num) + 1;
+     j =0;
+   }
+
+
+  }
+  i++;
+
+
+}//while문 끝
+
+
+for(int k = 1; k<=max; k++){
+   cout << out[k] << " ";
+ }
+
+
+ return 0;
+ 
+ }
