@@ -1,0 +1,5 @@
+BTL(Binary Search Tree)
+
+#inputs the number
+#bigger number to right, small number to left
+#same idea as Binary Linked List
