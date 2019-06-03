@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main(){
+  int r;
+  int num, want;
+  
+  cout << "How many times do you want to repeat? ";
+  cin >> r;
+  
+  cout << "How many number do you want? ";
+  cin >> want;
+
+  cout << "What is maximum number? ";
+  cin >> num;
+
+  //cout << want << " " << num;
+   srand((unsigned)time(NULL)); //have to be coded outside of for
+ 
+  for(int j = 0; j < r; j++){
+
+    cout << "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ"<< endl;
+    cout << j+1 <<"times repeated~~\n";
+    cout << "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ"<<endl;
+  
+  for(int i=1; i<=want; i++){
+   
+    int val = abs((rand() * RAND_MAX + rand()) % num);
+    cout<< val << endl;
+
+  }
+  
+}
+  return 0;
+  
+}
